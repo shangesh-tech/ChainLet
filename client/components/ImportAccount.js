@@ -138,7 +138,7 @@ export default function ImportAccount({ onAccountImported, onBack }) {
                 <div>
                   <h4 className="text-yellow-300 font-medium text-sm">Security Notice</h4>
                   <p className="text-yellow-200 text-xs mt-1">
-                    Never share your seed phrase or private key. Make sure you're in a secure environment.
+                    Never share your seed phrase or private key. Make sure you&apos;re in a secure environment.
                   </p>
                 </div>
               </div>

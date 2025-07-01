@@ -244,7 +244,7 @@ const Faucets = () => {
                 <ul className="space-y-2 text-white/70 text-sm list-disc pl-5">
                     <li>Enter your wallet address above (must be the same as your connected wallet)</li>
                     <li>Make sure your wallet is connected to Sepolia test network</li>
-                    <li>Click the "Get Tokens" button to request test tokens</li>
+                    <li>Click the &quot;Get Tokens&quot; button to request test tokens</li>
                     <li>Wait for the cooldown period before requesting again</li>
                     <li>Contract Address: <span className="text-blue-400">{FAUCET_ADDRESS}</span></li>
                 </ul>

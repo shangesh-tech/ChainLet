@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { toast } from "react-toastify"
+import Image from "next/image"
 
 export default function QRCodeModal({ address, onClose }) {
   const [qrCodeUrl, setQrCodeUrl] = useState("")
@@ -33,16 +34,19 @@ export default function QRCodeModal({ address, onClose }) {
           {/* QR Code */}
           <div className="bg-white p-4 rounded-2xl mx-auto w-fit">
             {qrCodeUrl ? (
-              <img
-                src={qrCodeUrl}
-                alt="QR Code"
-                className="w-48 h-48 mx-auto"
-                onError={(e) => {
-                  e.target.style.display = "none"
-                  e.target.nextSibling.style.display = "flex"
-                }}
-              />
-
+              <div className="relative w-48 h-48">
+                <Image
+                  src={qrCodeUrl}
+                  alt="QR Code"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  onError={(e) => {
+                    e.target.style.display = "none"
+                    e.target.nextSibling.style.display = "flex"
+                  }}
+                  unoptimized={true}
+                />
+              </div>
             ) : (
               <div className="w-48 h-48 bg-gray-200 rounded-lg items-center justify-center">
                 <span className="text-gray-500 text-sm">There was an error generating the QR Code</span>

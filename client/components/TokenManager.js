@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { ethers } from "ethers"
 import { toast } from "react-toastify"
 
@@ -18,13 +18,7 @@ export default function TokenManager({ wallet, provider, tokens, setTokens }) {
   const [isLoading, setIsLoading] = useState(false)
   const [tokenBalances, setTokenBalances] = useState({})
 
-  useEffect(() => {
-    if (tokens.length > 0 && provider && wallet) {
-      loadTokenBalances()
-    }
-  }, [tokens, provider, wallet])
-
-  const loadTokenBalances = async () => {
+  const loadTokenBalances = useCallback(async () => {
     if (!wallet || !provider) return;
 
     const balances = {}
@@ -42,7 +36,13 @@ export default function TokenManager({ wallet, provider, tokens, setTokens }) {
     }
 
     setTokenBalances(balances)
-  }
+  }, [wallet, provider, tokens])
+
+  useEffect(() => {
+    if (tokens.length > 0 && provider && wallet) {
+      loadTokenBalances()
+    }
+  }, [tokens, provider, wallet, loadTokenBalances])
 
   const addToken = async () => {
     if (!tokenAddress.trim() || !provider || !wallet) return;
