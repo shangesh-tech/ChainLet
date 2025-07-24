@@ -108,6 +108,8 @@ ChainLet/
   - Balance monitoring
   - Emergency withdrawal functions
 
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -159,33 +161,7 @@ ChainLet/
    npx hardhat test
    npx hardhat run script/deploy.js --network sepolia
    ```
-
-## 📖 Usage Guide
-
-### Creating Your First Wallet
-1. Open the application and click "Create New Wallet"
-2. Enter a name for your account
-3. Securely save the generated mnemonic phrase
-4. Confirm the mnemonic to complete setup
-
-### Adding Tokens
-1. Navigate to the "Tokens" tab
-2. Click "Add Token"
-3. Enter the token contract address
-4. The token details will be automatically fetched
-
-### Using the Faucet
-1. Go to the "Faucets" tab
-2. Enter your wallet address (or use current account)
-3. Click "Request Tokens" to claim SHAN tokens
-4. Wait for the cooldown period before requesting again
-
-### Sending Transactions
-1. Click "Send" in the main dashboard
-2. Enter recipient address and amount
-3. Review transaction details
-4. Confirm and wait for blockchain confirmation
-
+   
 ## 🔧 Development
 
 ### Smart Contract Development
@@ -233,21 +209,13 @@ npm run lint
 - **Transaction Confirmation**: Multi-step confirmation for all transactions
 - **Input Validation**: Comprehensive validation for all user inputs
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](ERC20_token/LICENSE) file for details.
 
 ## 👨‍💻 Author
 
-**Shangesh S** - *Initial work and development*
+**Shangesh S** 
 
 ## 🙏 Acknowledgments
 
@@ -258,5 +226,3 @@ This project is licensed under the MIT License - see the [LICENSE](ERC20_token/L
 - Tailwind CSS for styling utilities
 
 ---
-
-**⚠️ Disclaimer**: This is a testnet application for educational purposes. Do not use with mainnet funds or real assets.
